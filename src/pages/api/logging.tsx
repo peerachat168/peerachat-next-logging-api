@@ -10,6 +10,6 @@ export default function handler(
 ) {
   const data = req;
   console.log("Content-Security-Policy logging");
-  console.log(data);
+  console.log(data.body);
   res.status(200).json({ message: "logging success" });
 }
