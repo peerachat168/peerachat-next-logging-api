@@ -8,8 +8,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
-  const data = req;
-  console.log("Content-Security-Policy logging");
-  console.log(data);
+  console.log("Content-Security-Policy");
+  console.log({'query': req.query,'body': req.body});
   res.status(200).json({ message: "logging success" });
 }
