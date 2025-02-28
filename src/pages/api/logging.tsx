@@ -9,6 +9,6 @@ export default function handler(
   res: NextApiResponse<ResponseData>
 ) {
   console.log('Content-Security-Policy');
-  console.log({ 'url': req.url, 'type': req.type, 'query': req.query, 'body': req.body, 'headers': req.headers });
+  console.log({ 'url': req.url, 'query': req.query, 'body': req.body, 'headers': req.headers });
   res.status(200).json({ message: 'logging success' });
 }
